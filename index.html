@@ -1,0 +1,222 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Resumen 2025</title>
+
+<style>
+:root{
+  --bg1:#0b1020;
+  --bg2:#101a38;
+  --card: rgba(255,255,255,.08);
+  --line: rgba(255,255,255,.14);
+  --text: rgba(255,255,255,.92);
+  --muted: rgba(255,255,255,.72);
+  --radius:22px;
+  --shadow:0 18px 45px rgba(0,0,0,.35);
+}
+
+*{box-sizing:border-box}
+
+body{
+  margin:0;
+  font-family:system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  color:var(--text);
+  background:
+    radial-gradient(1200px 800px at 20% 10%, rgba(255,255,255,.12), transparent 55%),
+    linear-gradient(180deg, var(--bg1), var(--bg2));
+}
+
+.wrap{
+  max-width:1100px;
+  margin:auto;
+  padding:28px 16px 60px;
+}
+
+header{
+  text-align:center;
+  margin-bottom:30px;
+}
+header h1{
+  margin:0;
+  font-size:clamp(30px,5vw,46px);
+}
+header p{
+  margin-top:8px;
+  color:var(--muted);
+}
+
+.grid{
+  display:grid;
+  grid-template-columns:repeat(12,1fr);
+  gap:16px;
+}
+
+.card{
+  grid-column:span 12;
+  background:linear-gradient(180deg, var(--card), rgba(255,255,255,.05));
+  border:1px solid var(--line);
+  border-radius:var(--radius);
+  box-shadow:var(--shadow);
+}
+
+.card .inner{
+  display:grid;
+  grid-template-columns:1.2fr .8fr;
+  gap:14px;
+  padding:20px;
+  align-items:center;
+}
+
+.meta{
+  display:flex;
+  flex-direction:column;
+  gap:10px;
+}
+
+.tag{
+  display:inline-block;
+  padding:6px 12px;
+  border-radius:999px;
+  border:1px solid var(--line);
+  width:fit-content;
+  font-size:12px;
+  opacity:.8;
+}
+
+.card h2{
+  margin:0;
+  font-size:clamp(18px,2.2vw,26px);
+}
+.card p{
+  margin:0;
+  color:var(--muted);
+  line-height:1.45;
+}
+
+.figure{
+  display:flex;
+  justify-content:center;
+}
+
+.sticker{
+  width:min(260px,100%);
+  aspect-ratio:1/1;
+  border-radius:18px;
+  border:1px solid var(--line);
+  background:#fff;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  overflow:hidden;
+}
+
+.sticker img{
+  max-width:100%;
+  max-height:100%;
+  object-fit:contain;
+  filter:grayscale(100%) contrast(110%);
+}
+
+/* Responsive */
+@media (min-width:820px){
+  .card{grid-column:span 6;}
+}
+@media (max-width:560px){
+  .card .inner{grid-template-columns:1fr;}
+  .sticker{aspect-ratio:16/11;}
+}
+
+footer{
+  margin-top:30px;
+  text-align:center;
+  font-size:13px;
+  opacity:.6;
+}
+</style>
+</head>
+
+<body>
+<div class="wrap">
+
+<header>
+  <h1>2025 de Antos</h1>
+  <p>Un año con cosas muy buenas… y una rodilla rota que la rompieron (? </p>
+</header>
+
+<section class="grid">
+
+<!-- OPERACIÓN -->
+<article class="card">
+  <div class="inner">
+    <div class="meta">
+      <span class="tag">🦵 Salud</span>
+      <h2>Operación de mi amiga tu rodilla</h2>
+      <p>Dolor, paciencia, violencia, muletazos y recuperación. Pasito a pasito.</p>
+    </div>
+    <div class="figure">
+      <div class="sticker">
+        <img src="Imagenes/munequito-rodilla.jpg" alt="Muñequito rodilla">
+      </div>
+    </div>
+  </div>
+</article>
+
+<!-- NEW YORK -->
+<article class="card">
+  <div class="inner">
+    <div class="meta">
+      <span class="tag">🗽 Viajes</span>
+      <h2>Viaje a New York y Disney</h2>
+      <p>New York y los parques de Disney.</p>
+    </div>
+    <div class="figure">
+      <div class="sticker">
+        <img src="Imagenes/munequito-ny.jpg" alt="Muñequito New York">
+      </div>
+    </div>
+  </div>
+</article>
+
+<!-- AIRBAG -->
+<article class="card">
+  <div class="inner">
+    <div class="meta">
+      <span class="tag">🎸 Música</span>
+      <h2>Conciertos de Airbag</h2>
+      <p>Cantaste hasta quedarte sin voz.</p>
+    </div>
+    <div class="figure">
+      <div class="sticker">
+        <img src="Imagenes/munequito-airbag.jpg" alt="Muñequito Airbag">
+      </div>
+    </div>
+  </div>
+</article>
+
+<!-- AUTO -->
+<article class="card">
+  <div class="inner">
+    <div class="meta">
+      <span class="tag">🚗 Logro</span>
+      <h2>La nave</h2>
+      <p>Llaves en mano. Nuevos caminos.</p>
+    </div>
+    <div class="figure">
+      <div class="sticker">
+        <img src="Imagenes/munequito-auto.jpg" alt="Muñequito auto">
+      </div>
+    </div>
+  </div>
+</article>
+
+</section>
+
+<footer>
+  2025 — Pasaron un montón de cosas más, pero este año la rompiste, Antos. Seguro el 2026 va a ser aún mejor.
+</footer>
+
+</div>
+</body>
+</html>
